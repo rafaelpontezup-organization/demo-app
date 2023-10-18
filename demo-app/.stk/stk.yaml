@@ -1,0 +1,31 @@
+schema-version: v2
+kind: manifest
+metadata:
+  name: demo-app
+  description: demo-app
+  starter: popcorn-studio/spring-boot-rest-api-stack@1.0.1/rest-api-base
+  stack-version-id: 01HD2786F3JFCRPAGM04QD64V5
+  stack: spring-boot-rest-api-stack@1.0.1
+spec:
+  type: app
+  plugins:
+    - name: popcorn-studio/spring-boot-rest-api-stack@1.0.1/popcorn-springboot-base-plugin@0.0.1
+      alias: popcorn-springboot-base-plugin-1697661542217
+      plugin-version-id: 01HD2652BGPQFFFCSWWB1B02EM
+      stack-version-id: 01HD2786F3JFCRPAGM04QD64V5
+      type: app
+      inputs:
+        project_name: demo-app
+        project_group_id: br.com.zup.cinema
+        project_artifact_id: demo
+        project_springboot_version: 3.1.4
+        project_java_version: '17'
+      inputs-envs: {}
+      connections:
+        generates: []
+        requires: []
+      links:
+        generates: []
+  global-inputs: {}
+  global-computed-inputs: {}
+  repository: https://github.com/rafaelpontezup-organization/demo-app.git
